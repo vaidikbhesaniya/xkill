@@ -1,76 +1,62 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
+@layer base {
+  :root {
+    --background: #f2f2f2;
+    --foreground: #1f1f1f;
+    --primary: #1f1f1f;
+    --primary-foreground: #f2f2f2;
+    --card: #ffffff;
+    --card-foreground: #000000;
+    --popover: #ffffff;
+    --popover-foreground: #000000;
+    --secondary: #d1d1d1;
+    --secondary-foreground: #1f1f1f;
+    --muted: #d1d1d1;
+    --muted-foreground: #717171;
+    --accent: #d1d1d1;
+    --accent-foreground: #1f1f1f;
+    --destructive: #e63946;
+    --destructive-foreground: #f2f2f2;
+    --border: #cccccc;
+    --input: #cccccc;
+    --ring: #1f1f1f;
+    --radius: 0.5rem;
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
-
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
-
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
-
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
-
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
-
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
-
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
-
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
-
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
-
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
-
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
-
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
-
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
+    --appbar: #e4e4e4;
+    --appbar-foreground: #2e2e2e;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: #1f1f1f;
+    --foreground: #f2f2f2;
+    --primary: #f2f2f2;
+    --primary-foreground: #1f1f1f;
+    --card: #2c2c2c;
+    --card-foreground: #f2f2f2;
+    --popover: #2c2c2c;
+    --popover-foreground: #f2f2f2;
+    --secondary: #2c2c2c;
+    --secondary-foreground: #f2f2f2;
+    --muted: #2c2c2c;
+    --muted-foreground: #cacaca;
+    --accent: #2c2c2c;
+    --accent-foreground: #f2f2f2;
+    --destructive: #e63946;
+    --destructive-foreground: #f2f2f2;
+    --border: #3c3c3c;
+    --input: #3c3c3c;
+    --ring: #cacaca;
+    --appbar: #2e2e2e;
   }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

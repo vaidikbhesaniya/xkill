@@ -3,7 +3,7 @@ import { Metadata } from "next";
 const TITLE = "xKill";
 const DESCRIPTION =
   "xKill is an all-in-one platform built for the tech industry. It helps you prepare for interviews, get hired, and grow your career.";
-const BASE_URL = "https://xkill.tech";
+const BASE_URL = "";
 
 const siteConfig: Metadata = {
   title: TITLE,
