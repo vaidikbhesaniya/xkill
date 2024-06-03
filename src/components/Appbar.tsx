@@ -26,7 +26,7 @@ export default function Appbar() {
       <div className="flex items-center gap-[2rem]">
         <div className="cursor-pointer">
           <Image
-            src={currentTheme === 'light' ? '/images/menu-light.png' : '/images/menu-dark.png'}
+            src={currentTheme === 'light' ? './images/menu-light.png' : './images/menu-dark.png'}
             alt="menuBar"
             className="w-[1.4rem] h-[1.4rem]"
             width={22}
@@ -43,7 +43,7 @@ export default function Appbar() {
       <div className="flex items-center gap-[2rem]">
         <div className="cursor-pointer">
           <Image
-            src={currentTheme === 'light' ? '/images/share-light.png' : '/images/share-dark.png'}
+            src={currentTheme === 'light' ? './images/share-light.png' : './images/share-dark.png'}
             alt="shareBtn"
             className="w-[1.4rem] h-[1.4rem]"
             width={22}
@@ -53,7 +53,7 @@ export default function Appbar() {
         <ThemeToggler currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
         <div className="cursor-pointer">
           <Image
-            src={currentTheme === 'light' ? '/images/login-light.png' : '/images/login-dark.png'}
+            src={currentTheme === 'light' ? './images/login-light.png' : './images/login-dark.png'}
             alt="loginBtn"
             className="w-[1.4rem] h-[1.4rem]"
             width={22}

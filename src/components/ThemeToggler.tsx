@@ -22,7 +22,7 @@ export default function ThemeToggler({ currentTheme, setCurrentTheme }: Props) {
       className='bg-transparent p-0'
     >
       <Image
-        src={currentTheme === 'light' ? '/images/theme-toggler-light.png' : '/images/theme-toggler-dark.png'}
+        src={currentTheme === 'light' ? './images/theme-toggler-light.png' : './images/theme-toggler-dark.png'}
         alt="theme"
         className='w-[1.4rem] h-[1.4rem]'
         width={22}
