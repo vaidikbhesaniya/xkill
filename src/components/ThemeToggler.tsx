@@ -4,6 +4,8 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { Dispatch, SetStateAction } from 'react';
 import { Button } from './ui/button';
+import themeLight from '@/assets/theme-toggler-light.png';
+import themeDark from '@/assets/theme-toggler-dark.png';
 
 interface Props {
   currentTheme: string | undefined;
@@ -22,7 +24,7 @@ export default function ThemeToggler({ currentTheme, setCurrentTheme }: Props) {
       className='bg-transparent p-0'
     >
       <Image
-        src={currentTheme === 'light' ? './images/theme-toggler-light.png' : './images/theme-toggler-dark.png'}
+        src={currentTheme === 'light' ? themeDark : themeLight}
         alt="theme"
         className='w-[1.4rem] h-[1.4rem]'
         width={22}

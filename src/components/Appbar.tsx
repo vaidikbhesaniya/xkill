@@ -1,5 +1,11 @@
 "use client"
 
+import loginDark from "@/assets/login-dark.png";
+import loginLight from "@/assets/login-light.png";
+import menubarDark from "@/assets/menu-dark.png";
+import menubarLight from "@/assets/menu-light.png";
+import shareDark from "@/assets/share-dark.png";
+import shareLight from "@/assets/share-light.png";
 import { fonts } from '@/fonts/fonts';
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -26,7 +32,7 @@ export default function Appbar() {
       <div className="flex items-center gap-[2rem]">
         <div className="cursor-pointer">
           <Image
-            src={currentTheme === 'light' ? './images/menu-light.png' : './images/menu-dark.png'}
+            src={currentTheme === 'light' ? menubarLight : menubarDark}
             alt="menuBar"
             className="w-[1.4rem] h-[1.4rem]"
             width={22}
@@ -43,7 +49,7 @@ export default function Appbar() {
       <div className="flex items-center gap-[2rem]">
         <div className="cursor-pointer">
           <Image
-            src={currentTheme === 'light' ? './images/share-light.png' : './images/share-dark.png'}
+            src={currentTheme === 'light' ? shareLight : shareDark}
             alt="shareBtn"
             className="w-[1.4rem] h-[1.4rem]"
             width={22}
@@ -53,7 +59,7 @@ export default function Appbar() {
         <ThemeToggler currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
         <div className="cursor-pointer">
           <Image
-            src={currentTheme === 'light' ? './images/login-light.png' : './images/login-dark.png'}
+            src={currentTheme === 'light' ? loginLight : loginDark}
             alt="loginBtn"
             className="w-[1.4rem] h-[1.4rem]"
             width={22}
