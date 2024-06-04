@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
@@ -9,7 +9,7 @@ import themeDark from '@/assets/theme-toggler-dark.png';
 
 interface Props {
   currentTheme: string | undefined;
-  setCurrentTheme: Dispatch<SetStateAction<string | undefined>>
+  setCurrentTheme: Dispatch<SetStateAction<string | undefined>>;
 }
 
 export default function ThemeToggler({ currentTheme, setCurrentTheme }: Props) {
@@ -21,12 +21,12 @@ export default function ThemeToggler({ currentTheme, setCurrentTheme }: Props) {
         setTheme(currentTheme === 'light' ? 'dark' : 'light');
         setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light');
       }}
-      className='bg-transparent p-0'
+      className="bg-transparent p-0"
     >
       <Image
         src={currentTheme === 'light' ? themeLight : themeDark}
         alt="theme"
-        className='w-[1.4rem] h-[1.4rem]'
+        className="w-[1.4rem] h-[1.4rem]"
         width={22}
         height={22}
       />

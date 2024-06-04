@@ -1,11 +1,11 @@
-import localFont from "next/font/local";
+import localFont from 'next/font/local';
 
 const calSansFont = localFont({
-  src: "./CalSans.otf",
+  src: './CalSans.otf',
 });
 
 const productSansFont = localFont({
-  src: "./ProductSans.ttf",
+  src: './ProductSans.ttf',
 });
 
 export const fonts = {

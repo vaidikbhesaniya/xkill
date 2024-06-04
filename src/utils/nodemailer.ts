@@ -1,8 +1,8 @@
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
 
 function configureTransporter() {
   return nodemailer.createTransport({
-    service: "gmail",
+    service: 'gmail',
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT),
     secure: true,
@@ -18,7 +18,7 @@ export default async function sendOTP(email: string, otp: string) {
   const mailOptions = {
     from: process.env.USER,
     to: email,
-    subject: "Email Verification",
+    subject: 'Email Verification',
     html: `
     <h1>
       ${otp}
@@ -27,5 +27,5 @@ export default async function sendOTP(email: string, otp: string) {
   };
 
   const mailResponse = await transporter.sendMail(mailOptions);
-  return { mailResponse: mailResponse };
+  return { mailResponse };
 }

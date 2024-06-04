@@ -1,17 +1,17 @@
-"use client"
+'use client';
 
-import loginDark from "@/assets/login-dark.png";
-import loginLight from "@/assets/login-light.png";
-import menubarDark from "@/assets/menu-dark.png";
-import menubarLight from "@/assets/menu-light.png";
-import shareDark from "@/assets/share-dark.png";
-import shareLight from "@/assets/share-light.png";
+import loginDark from '@/assets/login-dark.png';
+import loginLight from '@/assets/login-light.png';
+import menubarDark from '@/assets/menu-dark.png';
+import menubarLight from '@/assets/menu-light.png';
+import shareDark from '@/assets/share-dark.png';
+import shareLight from '@/assets/share-light.png';
 import { fonts } from '@/fonts/fonts';
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
+import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import ThemeToggler from './ThemeToggler';
 
 export default function Appbar() {
   const { theme } = useTheme();
@@ -20,7 +20,9 @@ export default function Appbar() {
 
   useEffect(() => {
     if (theme === 'system') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      ).matches;
       setCurrentTheme(prefersDark ? 'dark' : 'light');
     } else {
       setCurrentTheme(theme);
@@ -41,7 +43,7 @@ export default function Appbar() {
         </div>
         <div
           className={`${fonts.calSans} text-[2rem] text-primary p-0 cursor-pointer`}
-          onClick={() => router.push("/")}
+          onClick={() => router.push('/')}
         >
           xkill
         </div>
@@ -56,7 +58,10 @@ export default function Appbar() {
             height={22}
           />
         </div>
-        <ThemeToggler currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
+        <ThemeToggler
+          currentTheme={currentTheme}
+          setCurrentTheme={setCurrentTheme}
+        />
         <div className="cursor-pointer">
           <Image
             src={currentTheme === 'light' ? loginLight : loginDark}
