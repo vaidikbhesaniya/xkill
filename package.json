@@ -14,7 +14,11 @@
     "dev:docker": "npm run prisma:migrate && next dev",
     "build:docker": "npm run prisma:generate && next build",
     "start:docker": "next start",
-    "vercel-build": "npm run prisma:generate && npm run prisma:migrate && next build"
+    "vercel-build": "npm run prisma:generate && npm run prisma:migrate && next build",
+    "lint:check": "eslint --max-warnings 0 --config .eslintrc .",
+    "lint:fix": "eslint --max-warnings 0 --config .eslintrc . --fix",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,json}\""
   },
   "dependencies": {
     "@prisma/client": "^5.12.1",
