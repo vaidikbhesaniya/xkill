@@ -3,11 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev && npm run build:css",
-    "build": "npx prisma generate && next build",
+    "postinstall": "prisma generate",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build"
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:generate": "prisma generate",
+    "studio": "prisma studio",
+    "dev:docker": "npm run prisma:migrate && next dev",
+    "build:docker": "npm run prisma:generate && next build",
+    "start:docker": "next start",
+    "vercel-build": "npm run prisma:generate && npm run prisma:migrate && next build"
   },
   "dependencies": {
     "@prisma/client": "^5.12.1",

@@ -24,7 +24,7 @@ export default function ThemeToggler({ currentTheme, setCurrentTheme }: Props) {
       className='bg-transparent p-0'
     >
       <Image
-        src={currentTheme === 'light' ? themeDark : themeLight}
+        src={currentTheme === 'light' ? themeLight : themeDark}
         alt="theme"
         className='w-[1.4rem] h-[1.4rem]'
         width={22}
