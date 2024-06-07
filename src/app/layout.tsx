@@ -5,6 +5,7 @@ import { fonts } from '@/fonts/fonts';
 import { Providers } from '@/components/Providers';
 import { ReactNode } from 'react';
 import './globals.css';
+import Footer from '@/components/footer/Footer';
 
 export const metadata = siteConfig;
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Providers>
           <Appbar />
           <div>{children}</div>
+          <Footer />
           <Toaster />
         </Providers>
       </body>

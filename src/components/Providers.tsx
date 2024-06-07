@@ -14,9 +14,7 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
         enableSystem
         disableTransitionOnChange
       >
-        <ViewTransitions>
-          {children}
-        </ViewTransitions>
+        <ViewTransitions>{children}</ViewTransitions>
       </ThemeProvider>
     </SessionProvider>
   );
