@@ -1,11 +1,11 @@
 'use client';
 
+import themeDark from '@/assets/theme-toggler-dark.png';
+import themeLight from '@/assets/theme-toggler-light.png';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import { Dispatch, SetStateAction } from 'react';
 import { Button } from './ui/button';
-import themeLight from '@/assets/theme-toggler-light.png';
-import themeDark from '@/assets/theme-toggler-dark.png';
 
 interface Props {
   currentTheme: string | undefined;

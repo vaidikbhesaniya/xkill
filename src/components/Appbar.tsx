@@ -8,15 +8,14 @@ import shareDark from '@/assets/share-dark.png';
 import shareLight from '@/assets/share-light.png';
 import { fonts } from '@/fonts/fonts';
 import { useTheme } from 'next-themes';
+import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import ThemeToggler from './ThemeToggler';
 
 export default function Appbar() {
   const { theme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState<string | undefined>('light');
-  const router = useRouter();
 
   useEffect(() => {
     if (theme === 'system') {
@@ -41,12 +40,12 @@ export default function Appbar() {
             height={22}
           />
         </div>
-        <div
+        <Link
           className={`${fonts.calSans} text-[2rem] text-primary p-0 cursor-pointer`}
-          onClick={() => router.push('/')}
+          href="/"
         >
           xkill
-        </div>
+        </Link>
       </div>
       <div className="flex items-center gap-[2rem]">
         <div className="cursor-pointer">
@@ -62,7 +61,7 @@ export default function Appbar() {
           currentTheme={currentTheme}
           setCurrentTheme={setCurrentTheme}
         />
-        <div className="cursor-pointer">
+        <Link className="cursor-pointer" href="/sign-in">
           <Image
             src={currentTheme === 'light' ? loginLight : loginDark}
             alt="loginBtn"
@@ -70,7 +69,7 @@ export default function Appbar() {
             width={22}
             height={22}
           />
-        </div>
+        </Link>
       </div>
     </div>
   );
