@@ -1,14 +1,14 @@
 'use client';
 
 import GithubDark from '@/assets/github-dark.png';
-// import GithubLight from "@/assets/github-light.png";
+import GithubLight from '@/assets/github-light.png';
 import Google from '@/assets/google.png';
 import { Button } from '@/components/ui/button';
-// import { signIn } from "next-auth/react";
+import { AppStore } from '@/store/appStore';
+import { signIn } from "next-auth/react";
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import { AppStore } from '@/store/appStore';
-import GithubLight from '@/assets/github-light.png';
+
 export default function SignUp() {
   const store = AppStore();
   return (
@@ -22,22 +22,22 @@ export default function SignUp() {
           </div>
           <div className="flex flex-col gap-[0.5rem]">
             <Button
-              className="text-primary bg-transparent flex gap-[1rem]  border-2 border-border py-6"
+              className="text-primary bg-transparent flex gap-[1rem] border-2 border-border py-6"
               onClick={() => {
-                // signIn("google");
+                signIn("google");
               }}
             >
               <Image
                 src={Google}
                 alt="google"
-                className="w-[1.5rem] h-[1.5rem] "
+                className="w-[1.5rem] h-[1.5rem]"
               />
-              <span className="mr-[10rem]">Continue with Google</span>
+              <span className="mr-[6rem] md:mr-[10rem]">Continue with Google</span>
             </Button>
             <Button
-              className="text-primary bg-transparent flex gap-[1rem]  border-2 border-border py-6"
+              className="text-primary bg-transparent flex gap-[1rem] border-2 border-border py-6"
               onClick={() => {
-                // signIn("github");
+                signIn("github");
               }}
             >
               {store.theme === 'light' ? (
@@ -53,10 +53,10 @@ export default function SignUp() {
                   className="w-[1.5rem] h-[1.5rem]"
                 />
               )}
-              <span className="mr-[10rem]">Continue with Github</span>
+              <span className="mr-[6rem] md:mr-[10rem]">Continue with Github</span>
             </Button>
           </div>
-          <span className="text-xs">
+          <span className="text-[0.8rem]">
             Have an account?{' '}
             <Link href="/sign-in" className="underline">
               Sign-in
