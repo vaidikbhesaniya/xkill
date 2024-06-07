@@ -12,8 +12,10 @@ import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import ThemeToggler from './ThemeToggler';
+import { AppStore } from '@/store/appStore';
 
 export default function Appbar() {
+  const store = AppStore();
   const { theme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState<string | undefined>('light');
 
@@ -23,10 +25,12 @@ export default function Appbar() {
         '(prefers-color-scheme: dark)',
       ).matches;
       setCurrentTheme(prefersDark ? 'dark' : 'light');
+      store.setTheme(prefersDark ? 'dark' : 'light');
     } else {
-      setCurrentTheme(theme);
+      setCurrentTheme(theme as 'light' | 'dark');
     }
-  }, [theme]);
+    store.setTheme(theme as 'light' | 'dark');
+  }, [theme, store.theme]);
 
   return (
     <div className="fixed top-0 left-0 w-full bg-appbar h-[10vh] flex items-center justify-between px-[1.5rem]">

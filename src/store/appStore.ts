@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 
 interface AppStore {
-  theme: 'light' | 'dark';
-  setTheme: (theme: 'light' | 'dark') => void;
+  theme: string;
+  setTheme: (theme: 'light' | 'dark' | 'undefined') => void;
 }
 
 export const AppStore = create<AppStore>((set) => ({
   theme: 'light',
-  setTheme: (theme: 'light' | 'dark') => set({ theme }),
+  setTheme: (theme: 'light' | 'dark' | 'undefined') => set({ theme }),
 }));
