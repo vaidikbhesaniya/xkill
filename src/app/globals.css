@@ -6,6 +6,7 @@
   :root {
     --background: #f2f2f2;
     --foreground: #1f1f1f;
+
     --primary: #1f1f1f;
     --primary-foreground: #f2f2f2;
     --card: #ffffff;
@@ -20,7 +21,7 @@
     --accent-foreground: #1f1f1f;
     --destructive: #e63946;
     --destructive-foreground: #f2f2f2;
-    --border: #cccccc;
+    --border: #1f1f1f;
     --input: #cccccc;
     --ring: #1f1f1f;
     --radius: 0.5rem;
@@ -46,7 +47,7 @@
     --accent-foreground: #f2f2f2;
     --destructive: #e63946;
     --destructive-foreground: #f2f2f2;
-    --border: #3c3c3c;
+    --border: #f2f2f2;
     --input: #3c3c3c;
     --ring: #cacaca;
     --appbar: #2e2e2e;
