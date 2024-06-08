@@ -1,4 +1,4 @@
-import { tncContent } from '@/components/footer/tnc/tncContent';
+import { tncContent } from '@/components/landing/footer/tnc/tncContent';
 import React from 'react';
 
 export default function TermsAndConditionsPage() {
