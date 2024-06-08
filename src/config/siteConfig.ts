@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 const TITLE = 'xkill';
 const DESCRIPTION =
-  'xkill is an all-in-one platform built for the tech industry. It helps you prepare for interviews, upgrade your ski, and grow your career.';
+  'xkill is an all-in-one platform built for the tech industry. It helps you prepare for interviews, upgrade your skill, and grow your career.';
 const BASE_URL = 'https://www.xkill.tech';
 
 const siteConfig: Metadata = {
