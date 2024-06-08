@@ -5,7 +5,7 @@ import { fonts } from '@/fonts/fonts';
 import { Providers } from '@/components/Providers';
 import { ReactNode } from 'react';
 import './globals.css';
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/landing/footer/Footer';
 
 export const metadata = siteConfig;
 

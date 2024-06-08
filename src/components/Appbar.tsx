@@ -40,15 +40,15 @@ export default function Appbar() {
   return (
     <div className="fixed top-0 left-0 w-full bg-appbar h-[10vh] flex items-center justify-between px-[1.5rem]">
       <div className="flex items-center gap-[2rem]">
-        <div className="cursor-pointer">
-          {/* <Image
+        {/* <div className="cursor-pointer">
+          <Image
             src={currentTheme === 'light' ? menubarLight : menubarDark}
             alt="menuBar"
-            className="w-[1.4rem] h-[1.4rem]"
+            className="w-[1.4rem] h-[1.4rem] select-none"
             width={22}
             height={22}
-          /> */}
-        </div>
+          /> 
+        </div>*/}
 
         <Logo isRedirect={true} size={3}></Logo>
       </div>
@@ -57,7 +57,7 @@ export default function Appbar() {
           <Image
             src={currentTheme === 'light' ? shareLight : shareDark}
             alt="shareBtn"
-            className="w-[1.4rem] h-[1.4rem]"
+            className="w-[1.4rem] h-[1.4rem] select-none"
             width={22}
             height={22}
           />
@@ -71,7 +71,7 @@ export default function Appbar() {
             <Image
               src={currentTheme === 'light' ? logoutLight : logoutDark}
               alt="loginBtn"
-              className="w-[1.4rem] h-[1.4rem]"
+              className="w-[1.4rem] h-[1.4rem] select-none"
               width={22}
               height={22}
             />
@@ -81,7 +81,7 @@ export default function Appbar() {
             <Image
               src={currentTheme === 'light' ? loginLight : loginDark}
               alt="loginBtn"
-              className="w-[1.4rem] h-[1.4rem]"
+              className="w-[1.4rem] h-[1.4rem] select-none"
               width={22}
               height={22}
             />
