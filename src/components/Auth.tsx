@@ -7,12 +7,9 @@ import { AppStore } from '@/store/appStore';
 import { signIn } from 'next-auth/react';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
-// import { useRef } from 'react';
-import { toast } from 'sonner';
-import { Button } from './ui/button';
+import { useState } from 'react';
 import Logo from './Logo';
+import { Button } from './ui/button';
 
 interface AuthProps {
   title: string;
@@ -45,37 +42,6 @@ export default function Auth({
     return store.theme === 'light' ? GithubLight : GithubDark;
   };
 
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const status = searchParams.get('status');
-  // Hot Reload while development
-  // const prevStatusRef = useRef<string | null>(null);
-
-  // // Comment before pushing
-  // useEffect(() => {
-  //   if (status && status !== prevStatusRef.current) {
-  //     if (status === '200') {
-  //       router.push('/');
-  //       toast.success('Welcome to xkill!');
-  //     } else {
-  //       toast.error('Something went wrong, Try Again!');
-  //     }
-  //     prevStatusRef.current = status;
-  //   }
-  // }, [status]);
-
-  // Comment out before pushing
-  useEffect(() => {
-    if (status) {
-      if (status === '200') {
-        toast.success('Welcome to xkill!');
-        router.push('/');
-      } else {
-        toast.error('Something went wrong, Try Again!');
-      }
-    }
-  }, [status]);
-
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center">
       <div className="border-2 border-border rounded-2xl px-8 py-12">
@@ -95,9 +61,7 @@ export default function Auth({
               disabled={loadingGoogle || loadingGithub}
             >
               {loadingGoogle ? (
-                <div className="w-[1.5rem] h-[1.5rem]">
-                  <div className="loader"></div>
-                </div>
+                <div className="loader"></div>
               ) : (
                 <Image
                   src={Google}
@@ -115,14 +79,12 @@ export default function Auth({
               disabled={loadingGoogle || loadingGithub}
             >
               {loadingGithub ? (
-                <div className="w-[1.5rem] h-[1.5rem]">
-                  <div className="loader"></div>
-                </div>
+                <div className="loader"></div>
               ) : (
                 <Image
                   src={getGithubImage()}
                   alt="github"
-                  className="w-[1.5rem] h-[1.5rem]"
+                  className="w-[1.5rem] h-[1.5rem] select-none"
                 />
               )}
               <span className="mr-[6rem] md:mr-[10rem]">
@@ -131,7 +93,7 @@ export default function Auth({
             </Button>
           </div>
           <span className="text-[0.8rem]">
-            {question}
+            {question}{' '}
             <Link href={redirectLink} className="underline">
               {redirectText}
             </Link>

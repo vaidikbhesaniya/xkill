@@ -24,7 +24,10 @@ const config: Config = {
         },
         input: 'var(--input)',
         ring: 'var(--ring)',
-        background: 'var(--background)',
+        background: {
+          DEFAULT: 'var(--background)',
+          blur: 'var(--background-blur)',
+        },
         foreground: 'var(--foreground)',
         primary: {
           DEFAULT: 'var(--primary)',

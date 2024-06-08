@@ -5,7 +5,8 @@
 @layer base {
   :root {
     --background: #f6f6f6;
-    --foreground: #1f1f1f;
+    --background-blur: #1f1f1f80;
+    --foreground: #010101;
 
     --primary: #1f1f1f;
     --primary-foreground: #f6f6f6;
@@ -32,6 +33,7 @@
 
   .dark {
     --background: #1f1f1f;
+    --background-blur: #f6f6f680;
     --foreground: #f6f6f6;
     --primary: #f6f6f6;
     --primary-foreground: #1f1f1f;
@@ -54,24 +56,7 @@
   }
 
   .loader {
-    border: 5px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    border-top: 4px solid black;
-    width: 20px;
-    height: 20px;
-    animation: spin 1s linear infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+    @apply w-[1.5rem] h-[1.5rem] border-t-[3.5px] border-[3.5px] border-background-blur border-t-foreground rounded-full animate-spin;
   }
 
   * {
