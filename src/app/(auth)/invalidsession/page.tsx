@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import Toaster from "@/components/ui/sonner";
-import { signOut } from "next-auth/react";
-import React, { useEffect } from "react";
-import { toast } from "sonner";
+import Toaster from '@/components/ui/sonner';
+import { signOut } from 'next-auth/react';
+import React, { useEffect } from 'react';
+import { toast } from 'sonner';
 
 export default function InvalidSession() {
   useEffect(() => {
     signOut({
-      callbackUrl: "/login",
+      callbackUrl: '/login',
     });
-    toast("Too many devices connected. Logging out!", {
+    toast('Too many devices connected. Logging out!', {
       action: {
-        label: "Close",
+        label: 'Close',
         onClick: () => toast.dismiss(),
       },
     });

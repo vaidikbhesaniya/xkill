@@ -91,6 +91,6 @@ export default function Appbar() {
           </Link>
         )}
       </div>
-    </div >
+    </div>
   );
 }

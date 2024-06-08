@@ -21,9 +21,12 @@ export default function Home() {
           Land Jobs, and Thrive
         </div>
       </div>
-      <div className="bg-[#1B6EF3] px-[1rem] py-[0.8rem] rounded-lg cursor-pointer" onClick={() => {
-        toast.info('Get Started');
-      }}>
+      <div
+        className="bg-[#1B6EF3] px-[1rem] py-[0.8rem] rounded-lg cursor-pointer"
+        onClick={() => {
+          toast.info('Get Started');
+        }}
+      >
         <span className="text-[1.2rem] text-[#F2F2F2] leading-[1.2rem] py-[1rem]">
           Get Started
         </span>

@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className={`min-h-screen ${fonts.productSans}`}>
         <Providers>
-          <Toaster position='bottom-right' />
+          <Toaster position="bottom-right" />
           <Appbar />
           <div>{children}</div>
           <Footer />
