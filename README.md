@@ -74,5 +74,5 @@ For major changes, please open an issue first to discuss what you would like to 
 Read our [contribution guidelines](./CONTRIBUTING.md) for more details.
 
 <a href="https://github.com/priyanshpatel18/xkill/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=priyanshpatel18/xkill&max=400&columns=20" />
+  <img src="https://contrib.rocks/image?repo=priyanshpatel18/xkill" />
 </a>
