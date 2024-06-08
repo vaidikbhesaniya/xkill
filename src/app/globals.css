@@ -21,13 +21,13 @@
     --accent-foreground: #1f1f1f;
     --destructive: #e63946;
     --destructive-foreground: #f6f6f6;
-    --border: #1f1f1f;
     --input: #cccccc;
     --ring: #1f1f1f;
     --radius: 0.5rem;
 
     --appbar: #e4e4e4;
     --appbar-foreground: #2e2e2e;
+    --border: #1f1f1f;
   }
 
   .dark {
@@ -47,10 +47,10 @@
     --accent-foreground: #f6f6f6;
     --destructive: #e63946;
     --destructive-foreground: #f6f6f6;
-    --border: #f6f6f6;
     --input: #3c3c3c;
     --ring: #cacaca;
     --appbar: #2e2e2e;
+    --border: #e4e4e4;
   }
 
   * {

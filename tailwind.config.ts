@@ -19,7 +19,9 @@ const config: Config = {
     },
     extend: {
       colors: {
-        border: 'var(--border)',
+        border: {
+          DEFAULT: 'var(--border)',
+        },
         input: 'var(--input)',
         ring: 'var(--ring)',
         background: 'var(--background)',
