@@ -8,10 +8,11 @@ import { signIn } from 'next-auth/react';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 // import { useRef } from 'react';
 import { toast } from 'sonner';
 import { Button } from './ui/button';
+import Logo from './Logo';
 
 interface AuthProps {
   title: string;
@@ -27,6 +28,22 @@ export default function Auth({
   redirectText,
 }: AuthProps) {
   const store = AppStore();
+  const [loadingGoogle, setLoadingGoogle] = useState(false);
+  const [loadingGithub, setLoadingGithub] = useState(false);
+
+  const handleAuth = async (provider: string) => {
+    if (provider === 'google') {
+      setLoadingGoogle(true);
+    } else if (provider === 'github') {
+      setLoadingGithub(true);
+    }
+    store.setLoading(true);
+    await signIn(provider);
+  };
+
+  const getGithubImage = () => {
+    return store.theme === 'light' ? GithubLight : GithubDark;
+  };
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -62,53 +79,59 @@ export default function Auth({
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center">
       <div className="border-2 border-border rounded-2xl px-8 py-12">
+        <div className="xkill">
+          <Logo isRedirect={false} size={2}></Logo>
+          <div className="pb-5"></div>
+        </div>
         <div className="flex flex-col gap-[1rem]">
           <div className="flex flex-col gap-[0rem]">
-            <span className="font-extrabold text-2xl capitalize">{title}</span>
+            <span className="font-extrabold text-2xl">{title}</span>
             <span>to continue to xkill</span>
           </div>
           <div className="flex flex-col gap-[0.5rem]">
             <Button
               className="text-primary bg-transparent flex gap-[1rem] border-2 border-border py-6"
-              onClick={() => {
-                signIn('google');
-              }}
+              onClick={() => handleAuth('google')}
+              disabled={loadingGoogle || loadingGithub}
             >
-              <Image
-                src={Google}
-                alt="google"
-                className="w-[1.5rem] h-[1.5rem]"
-              />
-              <span className="mr-[6rem] md:mr-[10rem] lg:text-[1rem]">
+              {loadingGoogle ? (
+                <div className="w-[1.5rem] h-[1.5rem]">
+                  <div className="loader"></div>
+                </div>
+              ) : (
+                <Image
+                  src={Google}
+                  alt="google"
+                  className="w-[1.5rem] h-[1.5rem]"
+                />
+              )}
+              <span className="mr-[6rem] md:mr-[10rem]">
                 Continue with Google
               </span>
             </Button>
             <Button
               className="text-primary bg-transparent flex gap-[1rem] border-2 border-border py-6"
-              onClick={() => {
-                signIn('github');
-              }}
+              onClick={() => handleAuth('github')}
+              disabled={loadingGoogle || loadingGithub}
             >
-              {store.theme === 'light' ? (
-                <Image
-                  src={GithubLight}
-                  alt="github"
-                  className="w-[1.5rem] h-[1.5rem]"
-                />
+              {loadingGithub ? (
+                <div className="w-[1.5rem] h-[1.5rem]">
+                  <div className="loader"></div>
+                </div>
               ) : (
                 <Image
-                  src={GithubDark}
+                  src={getGithubImage()}
                   alt="github"
                   className="w-[1.5rem] h-[1.5rem]"
                 />
               )}
-              <span className="mr-[6rem] md:mr-[10rem] lg:text-[1rem]">
+              <span className="mr-[6rem] md:mr-[10rem]">
                 Continue with Github
               </span>
             </Button>
           </div>
           <span className="text-[0.8rem]">
-            {question}{' '}
+            {question}
             <Link href={redirectLink} className="underline">
               {redirectText}
             </Link>

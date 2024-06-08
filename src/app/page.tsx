@@ -1,17 +1,69 @@
 'use client';
-
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 import { fonts } from '@/fonts/fonts';
 import { toast } from 'sonner';
 
 export default function Home() {
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const texts = [
+      'Web Development',
+      'Application Development',
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Data Structures and Algorithm',
+    ];
+
+    const tl = gsap.timeline({ repeat: -1 });
+
+    texts.forEach((text) => {
+      tl.to(textRef.current, {
+        duration: 1,
+        y: 50,
+        opacity: 0,
+        onComplete: () => {
+          const textElement = textRef.current as HTMLElement | null;
+          if (textElement) {
+            textElement.textContent = text;
+            gsap.set(textElement, { y: -50 });
+          }
+        },
+      }).to(textRef.current, {
+        duration: 1,
+        y: 0,
+        opacity: 1,
+        onStart: () => {
+          gsap.fromTo(
+            textRef.current,
+            {
+              x: 0,
+            },
+            {
+              x: 0,
+              duration: 0.1,
+              repeat: 5,
+              yoyo: true,
+              ease: 'power1.inOut',
+            },
+          );
+        },
+      });
+    });
+  }, []);
+
   return (
     <div className="h-screen flex justify-center items-center flex-col gap-[1rem] text-center p-[2rem]">
       <h1 className={`text-[4rem] ${fonts.calSans} leading-[4rem]`}>xkill</h1>
       <span className="text-[1.7rem] lg:text-[2.5rem] leading-[2rem] lg:leading-[2.5rem]">
         Level Up Your Tech Career in
       </span>
-      <div className="text-[#1B6EF3] text-[1.8rem] px-[1rem] py-[0.5rem] bg-[#DEEAFF] leading-[1.4rem] rounded-md">
-        xyz
+      <div
+        ref={textRef}
+        className="text-[#1B6EF3] text-[1.8rem] px-[1rem] py-[0.5rem] bg-[#DEEAFF] leading-[1.4rem] rounded-md"
+      >
+        Machine Learning
       </div>
       <div className="flex flex-col gap-[5px]">
         <div className="text-[1.5rem] lg:text-[2.5rem] leading-[1.5rem] lg:leading-[2.5rem]">
