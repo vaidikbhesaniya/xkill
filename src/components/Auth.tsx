@@ -46,7 +46,7 @@ export default function Auth({
     <div className="h-screen w-full flex flex-col justify-center items-center">
       <div className="border-2 border-border rounded-2xl px-8 py-12">
         <div className="xkill">
-          <Logo isRedirect={false} size={2}></Logo>
+          <Logo isRedirect={true} size={2}></Logo>
           <div className="pb-5"></div>
         </div>
         <div className="flex flex-col gap-[1rem]">

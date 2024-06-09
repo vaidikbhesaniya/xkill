@@ -38,7 +38,7 @@ export default function Appbar() {
   }, [theme, store.theme]);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-appbar h-[10vh] flex items-center justify-between px-[1.5rem]">
+    <div className="z-50 fixed top-0 left-0 w-full bg-appbar h-[10vh] flex items-center justify-between px-[1.5rem]">
       <div className="flex items-center gap-[2rem]">
         {/* <div className="cursor-pointer">
           <Image
