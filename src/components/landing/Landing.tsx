@@ -8,14 +8,14 @@ interface landingProps {
 
 export default function Landing({ textRef }: landingProps) {
   return (
-    <div className="h-screen flex justify-center items-center flex-col gap-[1rem] text-center p-[2rem]">
+    <div className="min-h-screen flex justify-center items-center flex-col gap-[1rem] text-center p-[2rem]">
       <h1 className={`text-[4rem] ${fonts.calSans} leading-[4rem]`}>xkill</h1>
       <span className="text-[1.7rem] lg:text-[2.5rem] leading-[2rem] lg:leading-[2.5rem]">
         Level Up Your Tech Career in
       </span>
       <div
         ref={textRef}
-        className="text-[#1B6EF3] text-[1.8rem] px-[1rem] py-[0.5rem] bg-[#DEEAFF] leading-[1.4rem] rounded-md"
+        className="text-[#1B6EF3] text-[1.4rem] lg:text-[1.8rem] px-[1rem] py-[0.5rem] bg-[#DEEAFF] leading-[1.4rem] rounded-md"
       >
         Machine Learning
       </div>

@@ -12,7 +12,7 @@ export const metadata = siteConfig;
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen ${fonts.productSans}`}>
+      <body className={`${fonts.productSans}`}>
         <Providers>
           <Toaster position="bottom-right" />
           <Appbar />

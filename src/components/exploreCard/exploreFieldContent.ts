@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export interface subFieldType {
   id: number;
   title: string;
@@ -6,85 +8,169 @@ export interface subFieldType {
 export interface exploreCardType {
   id: number;
   title: string;
+  bgImage?: StaticImageData;
   subFields?: subFieldType[];
 }
 
 export const exploreFields: exploreCardType[] = [
   {
     id: 1,
-    title: 'Programming',
+    title: 'Web Development',
+    bgImage: require('@/assets/webBG.png'),
     subFields: [
       {
         id: 1,
-        title: 'Python',
-        redirectLink: '/explore/programming/python',
+        title: 'Core Concepts',
+        redirectLink: '/web/core',
       },
       {
         id: 2,
-        title: 'Java',
+        title: 'ReactJS',
+        redirectLink: '/web/react',
       },
       {
         id: 3,
-        title: 'C++',
+        title: 'NodeJS',
+        redirectLink: '/web/nodejs',
       },
       {
         id: 4,
-        title: 'Read more...',
+        title: 'Popular Frameworks',
+        redirectLink: '/web/frameworks',
+      },
+      {
+        id: 4,
+        title: 'Advanced Concepts',
+        redirectLink: '/web/advanced',
       },
     ],
   },
   {
     id: 2,
-    title: 'Web Development',
+    title: 'Operating Systems',
+    bgImage: require('@/assets/osBG.png'),
     subFields: [
       {
         id: 1,
         title: 'Core Concepts',
+        redirectLink: '/os/core',
       },
       {
         id: 2,
-        title: 'ReactJS',
+        title: 'Linux',
+        redirectLink: '/os/linux',
       },
       {
         id: 3,
-        title: 'NodeJS',
+        title: 'Windows',
+        redirectLink: '/os/windows',
       },
       {
         id: 4,
-        title: 'Read more...',
+        title: 'MacOS',
+        redirectLink: '/os/macos',
+      },
+      {
+        id: 5,
+        title: 'Advanced Concepts',
+        redirectLink: '/os/advanced',
       },
     ],
   },
   {
     id: 3,
-    title: 'App Development',
+    title: 'Database Management Systems',
+    bgImage: require('@/assets/dbmsBG.png'),
+    subFields: [
+      {
+        id: 1,
+        title: 'Core Concepts',
+        redirectLink: '/dbms/core',
+      },
+      {
+        id: 2,
+        title: 'SQL',
+        redirectLink: '/dbms/sql',
+      },
+      {
+        id: 3,
+        title: 'NoSQL',
+        redirectLink: '/dbms/nosql',
+      },
+      {
+        id: 4,
+        title: 'Database Design',
+        redirectLink: '/dbms/design',
+      },
+      {
+        id: 5,
+        title: 'Advanced Concepts',
+        redirectLink: '/dbms/advanced',
+      },
+    ],
   },
   {
     id: 4,
-    title: 'Web3',
+    title: 'Programming',
+    bgImage: require('@/assets/programmingBG.png'),
+    subFields: [
+      {
+        id: 1,
+        title: 'Introduction to Programming',
+        redirectLink: '/programming/intro',
+      },
+      {
+        id: 2,
+        title: 'Core Concepts',
+        redirectLink: '/programming/core',
+      },
+      {
+        id: 3,
+        title: 'Data Structures and Algorithms',
+        redirectLink: '/programming/data-structures',
+      },
+      {
+        id: 4,
+        title: 'Object-Oriented Programming',
+        redirectLink: '/programming/oop',
+      },
+      {
+        id: 5,
+        title: 'Functional Programming',
+        redirectLink: '/programming/functional',
+      },
+    ],
   },
   {
     id: 5,
-    title: 'Database Management System',
-  },
-  {
-    id: 6,
-    title: 'Artificial Intelligence',
-  },
-  {
-    id: 7,
-    title: 'Machine Learning',
-  },
-  {
-    id: 8,
-    title: 'Data Science',
-  },
-  {
-    id: 9,
-    title: 'Operating System',
-  },
-  {
-    id: 10,
-    title: 'Computer Networks',
+    title: 'Mobile App Development',
+    bgImage: require('@/assets/appBG.png'),
+    subFields: [
+      {
+        id: 1,
+        title: 'Introduction to App Development',
+        redirectLink: '/app/intro',
+      },
+      {
+        id: 2,
+        title: 'App Design Principles',
+        redirectLink: '/app/design',
+      },
+      {
+        id: 3,
+        title: 'User Interface Development',
+        redirectLink: '/app/ui',
+      },
+      {
+        id: 4,
+        title: 'Cross-Platform Development',
+        redirectLink: '/app/cross-platform',
+      },
+      {
+        id: 5,
+        title: 'Native App Development',
+        redirectLink: '/app/native',
+      },
+    ],
   },
 ];
