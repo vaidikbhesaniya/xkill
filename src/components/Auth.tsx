@@ -44,7 +44,7 @@ export default function Auth({
 
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center">
-      <div className="border-2 border-border rounded-2xl px-8 py-12">
+      <div className="rounded-2xl px-8 py-12 bg-card">
         <div className="xkill">
           <Logo isRedirect={true} size={2}></Logo>
           <div className="pb-5"></div>
@@ -56,7 +56,7 @@ export default function Auth({
           </div>
           <div className="flex flex-col gap-[0.5rem]">
             <Button
-              className="text-primary bg-transparent flex gap-[1rem] border-2 border-border py-6"
+              className="text-primary bg-background flex gap-[1rem] border-[1px] border-border py-6"
               onClick={() => handleAuth('google')}
               disabled={loadingGoogle || loadingGithub}
             >
@@ -69,12 +69,12 @@ export default function Auth({
                   className="w-[1.5rem] h-[1.5rem]"
                 />
               )}
-              <span className="mr-[6rem] md:mr-[10rem]">
+              <span className="mr-[6rem] md:mr-[10rem] lg:text-[1rem]">
                 Continue with Google
               </span>
             </Button>
             <Button
-              className="text-primary bg-transparent flex gap-[1rem] border-2 border-border py-6"
+              className="text-primary bg-background flex gap-[1rem] border-[1px] border-border py-6"
               onClick={() => handleAuth('github')}
               disabled={loadingGoogle || loadingGithub}
             >
@@ -87,7 +87,7 @@ export default function Auth({
                   className="w-[1.5rem] h-[1.5rem] select-none"
                 />
               )}
-              <span className="mr-[6rem] md:mr-[10rem]">
+              <span className="mr-[6rem] md:mr-[10rem] lg:text-[1rem]">
                 Continue with Github
               </span>
             </Button>

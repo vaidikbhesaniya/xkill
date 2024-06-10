@@ -1,4 +1,9 @@
 import { StaticImageData } from 'next/image';
+import programmingBG from '@/assets/programmingBG.png';
+import osBG from '@/assets/osBG.png';
+import dbmsBG from '@/assets/dbmsBG.png';
+import webBG from '@/assets/webBG.png';
+import appBG from '@/assets/appBG.png';
 
 export interface subFieldType {
   id: number;
@@ -15,104 +20,8 @@ export interface exploreCardType {
 export const exploreFields: exploreCardType[] = [
   {
     id: 1,
-    title: 'Web Development',
-    bgImage: require('@/assets/webBG.png'),
-    subFields: [
-      {
-        id: 1,
-        title: 'Core Concepts',
-        redirectLink: '/web/core',
-      },
-      {
-        id: 2,
-        title: 'ReactJS',
-        redirectLink: '/web/react',
-      },
-      {
-        id: 3,
-        title: 'NodeJS',
-        redirectLink: '/web/nodejs',
-      },
-      {
-        id: 4,
-        title: 'Popular Frameworks',
-        redirectLink: '/web/frameworks',
-      },
-      {
-        id: 4,
-        title: 'Advanced Concepts',
-        redirectLink: '/web/advanced',
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: 'Operating Systems',
-    bgImage: require('@/assets/osBG.png'),
-    subFields: [
-      {
-        id: 1,
-        title: 'Core Concepts',
-        redirectLink: '/os/core',
-      },
-      {
-        id: 2,
-        title: 'Linux',
-        redirectLink: '/os/linux',
-      },
-      {
-        id: 3,
-        title: 'Windows',
-        redirectLink: '/os/windows',
-      },
-      {
-        id: 4,
-        title: 'MacOS',
-        redirectLink: '/os/macos',
-      },
-      {
-        id: 5,
-        title: 'Advanced Concepts',
-        redirectLink: '/os/advanced',
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Database Management Systems',
-    bgImage: require('@/assets/dbmsBG.png'),
-    subFields: [
-      {
-        id: 1,
-        title: 'Core Concepts',
-        redirectLink: '/dbms/core',
-      },
-      {
-        id: 2,
-        title: 'SQL',
-        redirectLink: '/dbms/sql',
-      },
-      {
-        id: 3,
-        title: 'NoSQL',
-        redirectLink: '/dbms/nosql',
-      },
-      {
-        id: 4,
-        title: 'Database Design',
-        redirectLink: '/dbms/design',
-      },
-      {
-        id: 5,
-        title: 'Advanced Concepts',
-        redirectLink: '/dbms/advanced',
-      },
-    ],
-  },
-  {
-    id: 4,
     title: 'Programming',
-    bgImage: require('@/assets/programmingBG.png'),
+    bgImage: programmingBG,
     subFields: [
       {
         id: 1,
@@ -121,13 +30,13 @@ export const exploreFields: exploreCardType[] = [
       },
       {
         id: 2,
-        title: 'Core Concepts',
-        redirectLink: '/programming/core',
+        title: 'Control Structures',
+        redirectLink: '/programming/control-structures',
       },
       {
         id: 3,
-        title: 'Data Structures and Algorithms',
-        redirectLink: '/programming/data-structures',
+        title: 'Functions and Methods',
+        redirectLink: '/programming/functions-and-methods',
       },
       {
         id: 4,
@@ -136,40 +45,136 @@ export const exploreFields: exploreCardType[] = [
       },
       {
         id: 5,
-        title: 'Functional Programming',
-        redirectLink: '/programming/functional',
+        title: 'Data Structures and Algorithms',
+        redirectLink: '/programming/dsa',
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Operating Systems',
+    bgImage: osBG,
+    subFields: [
+      {
+        id: 1,
+        title: 'Process Management',
+        redirectLink: '/os/process-management',
+      },
+      {
+        id: 2,
+        title: 'Memory Management',
+        redirectLink: '/os/memory-management',
+      },
+      {
+        id: 3,
+        title: 'File Systems',
+        redirectLink: '/os/file-systems',
+      },
+      {
+        id: 4,
+        title: 'Concurrency and Synchronization',
+        redirectLink: '/os/concurrency-and-synchronization',
+      },
+      {
+        id: 5,
+        title: 'Virtualization and Containers',
+        redirectLink: '/os/virtualization-and-containers',
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Database Management Systems',
+    bgImage: dbmsBG,
+    subFields: [
+      {
+        id: 1,
+        title: 'Core Concepts',
+        redirectLink: '/dbms/core',
+      },
+      {
+        id: 2,
+        title: 'RDBMS',
+        redirectLink: '/dbms/rdbms',
+      },
+      {
+        id: 3,
+        title: 'Database Design and Normalization',
+        redirectLink: '/dbms/design-and-normalization',
+      },
+      {
+        id: 4,
+        title: 'Querying and SQL',
+        redirectLink: '/dbms/querying-and-sql',
+      },
+      {
+        id: 5,
+        title: 'Transactions and Concurrency',
+        redirectLink: '/dbms/transactions-and-concurrency',
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Web Development',
+    bgImage: webBG,
+    subFields: [
+      {
+        id: 1,
+        title: 'Basics',
+        redirectLink: '/web/basics',
+      },
+      {
+        id: 2,
+        title: 'JavaScript Fundamentals',
+        redirectLink: '/web/javascript',
+      },
+      {
+        id: 3,
+        title: 'Frontend Frameworks',
+        redirectLink: '/web/frontend',
+      },
+      {
+        id: 4,
+        title: 'Backend Development',
+        redirectLink: '/web/backend',
+      },
+      {
+        id: 4,
+        title: 'Database Integration',
+        redirectLink: '/web/database',
       },
     ],
   },
   {
     id: 5,
     title: 'Mobile App Development',
-    bgImage: require('@/assets/appBG.png'),
+    bgImage: appBG,
     subFields: [
       {
         id: 1,
-        title: 'Introduction to App Development',
+        title: 'Introduction to Mobile Development',
         redirectLink: '/app/intro',
       },
       {
         id: 2,
-        title: 'App Design Principles',
-        redirectLink: '/app/design',
+        title: 'Native App Development',
+        redirectLink: '/app/native',
       },
       {
         id: 3,
-        title: 'User Interface Development',
-        redirectLink: '/app/ui',
-      },
-      {
-        id: 4,
-        title: 'Cross-Platform Development',
+        title: 'Cross-Platform App Development',
         redirectLink: '/app/cross-platform',
       },
       {
+        id: 4,
+        title: 'User Interface (UI) Design',
+        redirectLink: '/app/ui',
+      },
+      {
         id: 5,
-        title: 'Native App Development',
-        redirectLink: '/app/native',
+        title: 'Backend Integration and APIs',
+        redirectLink: '/app/backend',
       },
     ],
   },

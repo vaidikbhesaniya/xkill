@@ -15,7 +15,7 @@ export default function ExploreCard({
   subFields,
 }: exploreCardProps) {
   return (
-    <Card className="bg-card relative">
+    <Card className="bg-card relative border-0">
       <CardHeader className="pb-0 lg:pb-4">
         <CardTitle className="text-lg lg:text-2xl tracking-wide">
           {title}
