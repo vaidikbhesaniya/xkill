@@ -56,6 +56,8 @@ const config: Config = {
         card: {
           DEFAULT: 'var(--card)',
           foreground: 'var(--card-foreground)',
+          hover: 'var(--card-hover)',
+          btnhover: 'var(--card-button-hover)',
         },
         appbar: {
           DEFAULT: 'var(--appbar)',

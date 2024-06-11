@@ -8,19 +8,21 @@ import appBG from '@/assets/appBG.png';
 export interface subFieldType {
   id: number;
   title: string;
-  redirectLink?: string;
+  redirectLink: string;
 }
 export interface exploreCardType {
   id: number;
   title: string;
-  bgImage?: StaticImageData;
-  subFields?: subFieldType[];
+  redirectLink: string;
+  bgImage: StaticImageData;
+  subFields: subFieldType[];
 }
 
 export const exploreFields: exploreCardType[] = [
   {
     id: 1,
     title: 'Programming',
+    redirectLink: '/programming',
     bgImage: programmingBG,
     subFields: [
       {
@@ -45,14 +47,15 @@ export const exploreFields: exploreCardType[] = [
       },
       {
         id: 5,
-        title: 'Data Structures and Algorithms',
-        redirectLink: '/programming/dsa',
+        title: 'Advanced Programming',
+        redirectLink: '/programming',
       },
     ],
   },
   {
     id: 2,
     title: 'Operating Systems',
+    redirectLink: '/os',
     bgImage: osBG,
     subFields: [
       {
@@ -85,6 +88,7 @@ export const exploreFields: exploreCardType[] = [
   {
     id: 3,
     title: 'Database Management Systems',
+    redirectLink: '/dbms',
     bgImage: dbmsBG,
     subFields: [
       {
@@ -117,6 +121,7 @@ export const exploreFields: exploreCardType[] = [
   {
     id: 4,
     title: 'Web Development',
+    redirectLink: '/web',
     bgImage: webBG,
     subFields: [
       {
@@ -140,7 +145,7 @@ export const exploreFields: exploreCardType[] = [
         redirectLink: '/web/backend',
       },
       {
-        id: 4,
+        id: 5,
         title: 'Database Integration',
         redirectLink: '/web/database',
       },
@@ -149,6 +154,7 @@ export const exploreFields: exploreCardType[] = [
   {
     id: 5,
     title: 'Mobile App Development',
+    redirectLink: '/app',
     bgImage: appBG,
     subFields: [
       {
