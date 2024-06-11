@@ -26,6 +26,8 @@
     --radius: 0.5rem;
 
     --card: #e6ebff;
+    --card-hover: #c8cde1;
+    --card-button-hover: rgb(160, 165, 185);
     --appbar: #e6ebff;
     --appbar-foreground: #1f202a;
     --border: #1f1f1f;
@@ -50,10 +52,12 @@
     --destructive-foreground: #f6f6f6;
     --input: #3c3c3c;
     --ring: #cacaca;
-    
+
     --appbar: #1f202a;
     --border: #e4e4e4;
     --card: #1f202a;
+    --card-hover: #35363F;
+    --card-button-hover: #63646F;
   }
 
   .loader {

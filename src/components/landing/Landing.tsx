@@ -3,7 +3,7 @@ import { Link } from 'next-view-transitions';
 import { MutableRefObject } from 'react';
 
 interface landingProps {
-  textRef: MutableRefObject<HTMLDivElement | null>;
+  textRef: MutableRefObject<null>;
 }
 
 export default function Landing({ textRef }: landingProps) {
