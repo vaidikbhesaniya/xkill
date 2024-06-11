@@ -1,14 +1,20 @@
-"use client";
+'use client';
 
-import FieldCard from "@/components/fieldCard/FieldCard";
-import { programmingData } from "@/components/fieldCard/data";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Link } from "next-view-transitions";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import FieldCard from '@/components/fieldCard/FieldCard';
+import { programmingData } from '@/components/fieldCard/data';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import { Link } from 'next-view-transitions';
+import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function page() {
-  const [currentField, setCurrentField] = useState<string>("");
+  const [currentField, setCurrentField] = useState<string>('');
   const params = useParams();
 
   useEffect(() => {
@@ -37,13 +43,12 @@ export default function page() {
   return (
     <div className="min-h-screen mt-[10vh] p-[2rem]">
       <Breadcrumbs currentField={currentField} />
-      <div className="text-3xl font-bold tracking-wider capitalize mb-[1.5rem]">{currentField}</div>
+      <div className="text-3xl font-bold tracking-wider capitalize mb-[1.5rem]">
+        {currentField}
+      </div>
       <div className="sm:flex-1 m-0 lg:mx-[5rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {programmingData.map((field) => (
-          <FieldCard
-            key={field.id}
-            field={field}
-          />
+          <FieldCard key={field.id} field={field} />
         ))}
       </div>
     </div>
@@ -55,20 +60,24 @@ function Breadcrumbs({ currentField }: { currentField: string }) {
     <Breadcrumb className="capitalize text-[1rem] text-primary mb-[1.5rem]">
       <BreadcrumbList>
         <BreadcrumbItem>
-          <Link href="/" className="opacity-50 hover:opacity-100 transition-all duration-400">
+          <Link
+            href="/"
+            className="opacity-50 hover:opacity-100 transition-all duration-400"
+          >
             Home
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <Link href="/explore" className="opacity-50 hover:opacity-100 transition-all duration-400">
+          <Link
+            href="/explore"
+            className="opacity-50 hover:opacity-100 transition-all duration-400"
+          >
             Explore
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
-        <BreadcrumbPage>
-          {currentField}
-        </BreadcrumbPage>
+        <BreadcrumbPage>{currentField}</BreadcrumbPage>
       </BreadcrumbList>
     </Breadcrumb>
   );
