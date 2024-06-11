@@ -113,5 +113,5 @@ export const programmingData: fieldType[] = [
     title: 'Advanced Programming',
     redirectLink: '/programming/advanced',
     totalExercises: 10,
-  }
+  },
 ];

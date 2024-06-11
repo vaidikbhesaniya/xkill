@@ -19,7 +19,7 @@ export default function Content() {
   const params = useParams();
   useEffect(() => {
     const field = params.field?.toString().toLowerCase();
-    const subFields = params.subField?.toString().toLowerCase();
+    // const subFields = params.subField?.toString().toLowerCase();
 
     switch (field) {
       case 'programming':
@@ -191,8 +191,6 @@ function Breadcrumbs({
             {currentField}
           </Link>
         </BreadcrumbItem>
-
-
         <BreadcrumbSeparator />
         <BreadcrumbPage>{currentSubField}</BreadcrumbPage>
       </BreadcrumbList>
