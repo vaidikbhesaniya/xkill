@@ -12,7 +12,7 @@ const siteConfig: Metadata = {
   },
   description: DESCRIPTION,
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
   },
   applicationName: TITLE,
   creator: 'Priyansh Patel',

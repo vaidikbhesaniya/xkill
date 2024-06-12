@@ -14,15 +14,13 @@ export default function ExploreCard({
   title,
   bgImage,
   subFields,
-  redirectLink
+  redirectLink,
 }: exploreCardProps) {
   return (
     <Card className="bg-card relative border-0">
       <CardHeader className="pb-0 lg:pb-4">
         <CardTitle className="text-lg lg:text-2xl tracking-wide capitalize cursor-pointer">
-          <Link href={`/explore/${redirectLink.toLowerCase()}`}>
-            {title}
-          </Link>
+          <Link href={`/explore/${redirectLink.toLowerCase()}`}>{title}</Link>
         </CardTitle>
       </CardHeader>
       <CardContent className="flex justify-between">

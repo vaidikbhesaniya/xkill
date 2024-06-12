@@ -1,6 +1,12 @@
 import ExploreCard from '@/components/exploreCard/ExploreCard';
 import { exploreFields } from '@/components/exploreCard/exploreFieldContent';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 import { Metadata } from 'next';
 import { Link } from 'next-view-transitions';
 
@@ -32,14 +38,15 @@ function Breadcrumbs() {
     <Breadcrumb className="capitalize text-[1rem] text-primary mb-[1rem]">
       <BreadcrumbList>
         <BreadcrumbItem>
-          <Link href="/" className="opacity-50 hover:opacity-100 transition-all duration-400">
+          <Link
+            href="/"
+            className="opacity-50 hover:opacity-100 transition-all duration-400"
+          >
             Home
           </Link>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
-        <BreadcrumbPage>
-          Explore
-        </BreadcrumbPage>
+        <BreadcrumbPage>Explore</BreadcrumbPage>
       </BreadcrumbList>
     </Breadcrumb>
   );
