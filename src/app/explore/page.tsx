@@ -7,7 +7,12 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { Metadata } from 'next';
 import { Link } from 'next-view-transitions';
+
+export const metadata: Metadata = {
+  title: 'Explore',
+};
 
 export default function ExplorePage() {
   return (
