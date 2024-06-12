@@ -1,6 +1,6 @@
 'use client';
 import Landing from '@/components/landing/Landing';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 
 export default function Home() {

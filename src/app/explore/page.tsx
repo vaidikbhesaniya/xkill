@@ -1,7 +1,12 @@
 import ExploreCard from '@/components/exploreCard/ExploreCard';
 import { exploreFields } from '@/components/exploreCard/exploreFieldContent';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+import { Metadata } from 'next';
 import { Link } from 'next-view-transitions';
+
+export const metadata: Metadata = {
+  title: 'Explore',
+};
 
 export default function ExplorePage() {
   return (
